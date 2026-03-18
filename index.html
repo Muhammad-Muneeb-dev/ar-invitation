@@ -4,6 +4,54 @@
 <meta charset="UTF-8">
 <title>AR Food Menu</title>
 
+<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+
+<style>
+body { margin:0; overflow:hidden; }
+</style>
+
+</head>
+
+<body>
+
+<a-scene
+mindar-image="imageTargetSrc: targets.mind;"
+color-space="sRGB"
+embedded
+vr-mode-ui="enabled: false"
+device-orientation-permission-ui="enabled: false">
+
+<a-assets>
+<img id="burger" src="burger.png">
+<img id="pizza" src="pizza.png">
+<img id="shawarma" src="shawarma.png">
+</a-assets>
+
+<a-camera position="0 0 0" look-controls="enabled:false"></a-camera>
+
+<a-entity mindar-image-target="targetIndex:0">
+
+<a-plane id="food"
+src="#burger"
+position="0 0 0"
+width="1"
+height="0.7">
+</a-plane>
+
+</a-entity>
+
+</a-scene>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AR Food Menu</title>
+
 <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.4/dist/mindar-image-aframe.prod.js"></script>
 
@@ -88,4 +136,4 @@ vr-mode-ui="enabled: false">
 </a-scene>
 
 </body>
-</html>
+</html> -->
